@@ -30,3 +30,14 @@
 .alert-success {
     padding: 10px;
 }
+.img-container img{
+	height: 200px;
+	width: 200px;
+}
+.img-container{
+	margin: 0 auto;
+	border:solid 1px black;
+}
+.card-header .btn-primary {
+    float: right;
+}

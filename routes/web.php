@@ -18,3 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//Route for Profile page
+Route::any('/profile','UserController@profile');
+
+//Route to Reset Password
+Route::post('/resetPassword','Auth\ResetPasswordController@requestPasswordChange');

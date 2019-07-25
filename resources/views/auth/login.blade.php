@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
-                <div class="login-logo"><img src="/images/t_logo.png"></div>
+                <div class="login-logo"><img src="{{asset('/images/t_logo.png')}}"></div>
                 <div class="login-app-name">{{ __('Terragenics') }} </div>
                     <form method="POST" action="{{ route('login') }}">
                         @csrf

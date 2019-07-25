@@ -36,4 +36,13 @@ class ResetPasswordController extends Controller
     {
         $this->middleware('guest');
     }
+
+    /**
+     * Initiates Change Password Request
+     *
+     * @return void
+     */
+    public function requestPasswordChange(){
+        
+    }
 }
