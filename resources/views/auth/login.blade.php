@@ -8,6 +8,8 @@
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
+                <div class="login-logo"><img src="/images/t_logo.png"></div>
+                <div class="login-app-name">{{ __('Terragenics') }} </div>
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -49,8 +51,8 @@
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
+                        <div class="form-group row">
+                            <div class="col-md-8 text-center">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
                                 </button>
@@ -58,9 +60,9 @@
                         </div>
                         
                         <div class="form-group row">
-                           <div class="col-md-12">
+                           <div class="col-md-12 text-center">
                                 <label class="form-check-label" for="remember">
-                                        {{ __('New User') }}
+                                        {{ __('New User?') }}
                                 </label>
                                 @if (Route::has('register'))
                                    <a href="{{ route('register') }}">Sign Up</a>
@@ -68,7 +70,7 @@
 
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Password?') }}
+                                        {{ __('Forgot Password') }}
                                     </a>
                                 @endif
                            </div>

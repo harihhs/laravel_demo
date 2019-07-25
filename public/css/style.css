@@ -3,3 +3,30 @@
     display: inline-block;
     padding: 0 5%;
 }
+.gender-radio span {
+    padding-left: 10px;
+}
+.create-account {
+    font-size: 18px;
+    padding-bottom: 15px;
+}
+.login-app-name {
+    font-size: 30px;
+    text-align: center;
+    padding: 20px 0px;
+}
+.login-logo {
+    text-align: center;
+    border: 1px solid;
+    width: 35%;
+    margin: 0 auto;
+    border-radius: 50%;
+    display: none;
+}
+.login-logo img {
+    width: 100px;
+    padding: 20px;
+}
+.alert-success {
+    padding: 10px;
+}

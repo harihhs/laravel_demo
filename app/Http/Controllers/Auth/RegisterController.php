@@ -7,6 +7,10 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use App\Mail\WelcomeMail;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Http\Request;
+use Illuminate\Auth\Events\Registered;
 
 class RegisterController extends Controller
 {
@@ -28,7 +32,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -64,7 +68,17 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $data['password'] = 'test1234';
+        $random = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz';
+        $data['password'] = substr(str_shuffle($random), 0, 8);
+
+        $user = [
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => $data['password'],
+        ];
+
+        Mail::to($data['email'])->send(new WelcomeMail($user));
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
@@ -72,5 +86,12 @@ class RegisterController extends Controller
             'gender' => $data['gender'],
             'password' => Hash::make($data['password']),
         ]);
+    }
+
+    public function register(Request $request)
+    {
+        $this->validator($request->all())->validate();
+        event(new Registered($user = $this->create($request->all())));
+        return back()->withAlert('Registered successfully, Login details sent to your registered email.');
     }
 }

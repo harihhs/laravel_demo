@@ -8,6 +8,17 @@
                 <div class="card-header"><a href="{{ URL::previous() }}"><</a>  {{ __('Register') }}</div>
 
                 <div class="card-body">
+                <div class=”panel-body”>
+                    @if(Session::has('alert'))
+                    <div class="alert alert-success">
+                    {{ Session::get('alert') }}
+                    @php
+                    Session::forget('alert');
+                    @endphp
+                    </div>
+                    @endif
+                </div>
+                    <div class="create-account">{{ __('Create an account') }} </div>
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
@@ -52,8 +63,8 @@
                         <label for="gender" class="col-md-4 col-form-label control-label">Gender</label>
                         <div id="gender-group" class="form-group{{ $errors->has('gender') ? ' has-error' : '' }} row">
                             <div class="col-md-12">
-                                <div class="gender-radio"><input id="male" type="radio" name="gender" value="Male" {{ (old('sex') == 'male') ? 'checked' : '' }} >Male</div>
-                                <div class="gender-radio"><input id="female" type="radio" name="gender" value="Female" {{ (old('sex') == 'female') ? 'checked' : '' }} >Female</div>
+                                <div class="gender-radio"><input id="male" type="radio" name="gender" value="Male" {{ (old('sex') == 'male') ? 'checked' : '' }} ><span>Male</span></div>
+                                <div class="gender-radio"><input id="female" type="radio" name="gender" value="Female" {{ (old('sex') == 'female') ? 'checked' : '' }} ><span>Female</span></div>
                                 @if ($errors->has('gender'))
                                 <span class="help-block">
                                     <strong>{{ $errors->first('gender') }}</strong>
@@ -63,14 +74,14 @@
                         </div>
                        
                         <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
+                            <div class="col-md-6 text-center">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Signup') }}
                                 </button>
                             </div>
                         </div>
                         <div class="form-group row">
-                            <div class="col-md-12">
+                            <div class="col-md-12 text-center">
 				                <label for="account" class="col-form-label">{{ __('Already have an account') }}</label>
                                 @if (Route::has('login'))
                             		<a href="{{ route('login') }}">Login</a>
