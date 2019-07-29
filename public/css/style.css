@@ -38,6 +38,10 @@
 	margin: 0 auto;
 	border:solid 1px black;
 }
-.card-header .btn-primary {
-    float: right;
+.back-icon {
+    width: 15px;
+}
+.error-msg{
+    color: red;
+    padding: 2px 0; 
 }

@@ -1,0 +1,103 @@
+<?php
+
+use Illuminate\Database\Seeder;
+
+class MetricsOptionsTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        $metricsOptiondata = [
+            ["metric_id" => "1", "option_name" => "Great", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "1", "option_name" => "Bloated", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "1", "option_name" => "Gassy", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "1", "option_name" => "Upset", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "2", "option_name" => "Running Smoothly", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "2", "option_name" => "Challenging", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "2", "option_name" => "Constipated", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "2", "option_name" => "Diarrhea", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "3", "option_name" => "No Issues", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "3", "option_name" => "Burpy", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "3", "option_name" => "Sour", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "3", "option_name" => "Nausea", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "4", "option_name" => "No Change", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "4", "option_name" => "Up", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "4", "option_name" => "Down", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "4", "option_name" => "It's Complicated", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "5", "option_name" => "Happy", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "5", "option_name" => "OK", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "5", "option_name" => "Sad", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "5", "option_name" => "Anxious", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "6", "option_name" => "Sharp", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "6", "option_name" => "Calm", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "6", "option_name" => "Distracted", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "6", "option_name" => "Stressed", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "7", "option_name" => "Ball of Fire", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "7", "option_name" => "Productive", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "7", "option_name" => "Just Getting By", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "7", "option_name" => "Lazy Day", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "8", "option_name" => "Energized", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "8", "option_name" => "Good", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "8", "option_name" => "Low", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "8", "option_name" => "Wasted", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "9", "option_name" => "Sociable", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "9", "option_name" => "Coping", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "9", "option_name" => "Detached", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "9", "option_name" => "Combative", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "10", "option_name" => "Rejuvenated", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "10", "option_name" => "Rested", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "10", "option_name" => "Disrupted", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "10", "option_name" => "Bad Night", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "11", "option_name" => "Total Control", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "11", "option_name" => "Minimal", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "11", "option_name" => "It's a Battle", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "11", "option_name" => "Anything Goes", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "12", "option_name" => "Intense Workout", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "12", "option_name" => "Good Workout", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "12", "option_name" => "Light Workout", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "12", "option_name" => "Not Today", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "13", "option_name" => "High Dairy", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "13", "option_name" => "Low Dairy", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "13", "option_name" => "Only in Other Foods", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "13", "option_name" => "Dairy Free", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "14", "option_name" => "Super Healthy", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "14", "option_name" => "Mostly Healthy", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "14", "option_name" => "More Bad Than Good", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "14", "option_name" => "Total Junk", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "15", "option_name" => "High Cal", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "15", "option_name" => "Medium Cal", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "15", "option_name" => "Low Cal", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "15", "option_name" => "No Calories", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "16", "option_name" => "Very Healthy Fats", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "16", "option_name" => "Balanced Fats", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "16", "option_name" => "Low Fat", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "16", "option_name" => "Bad Fats", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "17", "option_name" => "High Fiber", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "17", "option_name" => "Balanced Fiber", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "17", "option_name" => "Low Fiber", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "17", "option_name" => "No Fiber", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "18", "option_name" => "Sugar-Free", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "18", "option_name" => "Low Sugar", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "18", "option_name" => "High Sugar", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "18", "option_name" => "All Sugar All Day", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "19", "option_name" => "8+ Glasses", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "19", "option_name" => "5-7 Glasses", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "19", "option_name" => "2-4 Glasses", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "19", "option_name" => "Under 2 Glasses", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "20", "option_name" => "Diet Soda 24 oz or less", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "20", "option_name" => "Diet Soda Over 24 oz", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "20", "option_name" => "Regular Soda 24 oz or less", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "20", "option_name" => "Regular Soda Over 24 oz", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "21", "option_name" => "Less Than 8 Hours", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "21", "option_name" => "8-12 Hours", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "21", "option_name" => "12-16 Hours", "option_value" => "0","img_name" => ""],
+            ["metric_id" => "21", "option_name" => "16+ Hours", "option_value" => "0","img_name" => ""],
+            
+        ];
+        DB::table('metrics_options')->insert($metricsOptiondata);
+    }
+}

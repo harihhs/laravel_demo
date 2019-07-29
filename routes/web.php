@@ -23,4 +23,14 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::any('/profile','UserController@profile');
 
 //Route to Reset Password
-Route::post('/resetPassword','Auth\ResetPasswordController@requestPasswordChange');
+Route::post('/resetPassword','Auth\ChangePasswordController@requestPasswordChange');
+
+//Route for Profile page
+Route::any('/edit','UserController@edit');
+
+Route::resource('users','UserController');
+
+Route::post('users/{user}/update',  ['as' => 'users.update', 'uses' => 'UserController@update']);
+
+//Route for Profile page
+Route::any('/log','UserLog\LogController@index');

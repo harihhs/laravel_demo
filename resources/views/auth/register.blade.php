@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-4">
             <div class="card">
-                <div class="card-header"><a href="{{ URL::previous() }}"><</a>  {{ __('Register') }}</div>
+                <div class="card-header"><a href="{{ URL::previous() }}"><img class="back-icon" src="{{asset('/images/backicon.png')}}" alt="back-icon"></a><span class="align-middle">  {{ __('Register') }}</span></div>
 
                 <div class="card-body">
                 <div class=”panel-body”>
